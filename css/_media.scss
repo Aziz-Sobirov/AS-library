@@ -1,0 +1,25 @@
+@media (min-width:999px){
+    #navbar{
+        &_bars,&_mobile,&_close{
+            display: none;
+        }
+        &_desktop{
+            @include flexbox;
+        }
+    }
+}
+
+@media (min-width:759px){
+    #as_grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+
+@media (min-width:1025px){
+    #as_grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}

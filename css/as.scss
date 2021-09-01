@@ -1,0 +1,162 @@
+@import 'other';
+
+// navbar
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 5vw;
+    height: 50px;
+    max-height: 50px;
+    width: 100%;
+    @include flexbox(space-between);
+    transition: 0.5s;
+    z-index: 2;
+    &_bars{
+        padding: 5px 0;
+        height: 30px;
+        width: 30px;
+        overflow: hidden;
+        cursor: pointer;
+        @include flexbox(space-between);
+        flex-direction: column;
+        span{
+            height: 3px;
+            width: 100%;
+            background: #000;
+            transition: 0.5s;
+        }
+
+        &:hover{
+            span:nth-child(1){
+                transform: translateX(-50%);
+            }
+            span:nth-child(3){
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    &_desktop{
+        display: none;
+        a:not(:last-child){
+            margin-right: 50px;
+        }        
+    }
+
+    &_mobile{
+        position: fixed;
+        padding: 10px;
+        top: 0;
+        left: -220px;
+        min-height: 100vh;
+        width: 220px;
+        background: #f1f1f190;
+        backdrop-filter: blur(10px);
+        @include flexbox(flex-start,flex-start);
+        flex-direction: column;
+        transition: 1s;
+        z-index: 3;
+        a{
+            padding: 10px;
+            width: 100%;
+            @include flexbox(space-between);
+            transition: 0.5s;
+            &:hover{
+                background: #eaebed;
+            }
+        }
+    }
+
+    &_close{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        min-height: 100vh;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+#navbar.nav{
+    #navbar_mobile{
+        left: 0;
+    }
+    #navbar_close{
+        left: 0;
+    }
+}
+#navbar.bg{
+    background: #eaebed;
+}
+
+
+// grid bx
+#as_grid{
+    padding:10px;
+    width: 100%;
+    @include grid;
+}
+
+// input simple
+#as_input{
+    padding: 5px;
+    box-shadow: 0 0 0 1.5px #00000090;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.5s;
+    &::-webkit-search-cancel-button{
+        -webkit-appearance: none;
+        position: relative;
+        height: 20px;
+        width: 20px;
+        background: url("https://www.freeiconspng.com/uploads/remove-icon-png-25.png") center/cover;
+    }
+    &::placeholder{
+        transition: 0.5s;
+    }
+    &:focus{
+        box-shadow: 0 0 0 2px #000;
+        &::placeholder{
+            transform: translateX(-100%);
+        } 
+    }
+}
+
+// button
+#as_btn{
+    position: relative;
+    overflow: hidden;
+    padding: 7px 30px;
+    background: #eaebed;
+    border-radius: 4px;
+    a{
+        position: relative;
+        text-transform: uppercase;
+    }
+    &::before{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%,50%);
+        content: "";
+        height: 0;
+        width: 0;
+        background: #00ad99;
+        border-radius: 50%;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    &:hover{
+        a{
+            color: #fff;
+        }
+        &::before{
+            height: 300px;
+            width: 300px;
+            opacity: 1;
+        }
+    }
+}
+
+@import "media";
