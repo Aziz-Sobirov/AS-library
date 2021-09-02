@@ -7,7 +7,7 @@ if(navbar){
 <div id="navbar_bars" onclick="nav()">
     <span></span><span></span><span></span>
 </div>
-<!-- list -->
+<!-- list  of navbar -->
 <div id="navbar_desktop"></div>
 <div id="navbar_mobile"></div>
 <!-- close -->
