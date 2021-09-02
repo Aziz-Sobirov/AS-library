@@ -12,15 +12,6 @@ if(navbar){
 <div id="navbar_mobile"></div>
 <!-- close -->
 <div id="navbar_close" onclick="nav()"></div>`
-}else{
-    console.log("navbar")
-}
-
-
-let openedNav = false
-function nav(){
-    navbar.classList.toggle("nav")
-}
 
 // 
 let lastScrollTop = 0;
@@ -44,15 +35,26 @@ for(let i=0;i<navbar_list.length;i++){
     navbar_mobile.innerHTML+=`<a href="#${navbar_list[i].href}" onclick="nav()">
     <h4>${navbar_list[i].name}</h4><h4 class="far fa-angle-right"></h4></a>`
 }
+}
+
+
+let openedNav = false
+function nav(){
+    navbar.classList.toggle("nav")
+}
+
+
 
 
 // app
 let app_bar = document.getElementById("as_app-bar")
-for(let b=0;b<as_app_bar.length;b++){
-    app_bar.innerHTML+=`<li>
-    <a href="#${as_app_bar[b].href}">
-        <i class="${as_app_bar[b].icon}"></i>
-        <span>${as_app_bar[b].name}</span>
-    </a>
-    </li>`   
+if(app_bar){
+    for(let b=0;b<as_app_bar.length;b++){
+        app_bar.innerHTML+=`<li>
+        <a href="#${as_app_bar[b].href}">
+            <i class="${as_app_bar[b].icon}"></i>
+            <span>${as_app_bar[b].name}</span>
+        </a>
+        </li>`   
+    }
 }
