@@ -163,7 +163,7 @@
 // app
 
 #as_app{
-    position: relative;
+    // position: relative;
     min-height: 100vh;
     min-width: 100vw;
     overflow-x: scroll;
@@ -176,6 +176,7 @@
         bottom: 0;
         width: 100%;
         padding: 5px;
+        min-height: 50px;
         background-color: #00ad99cc;
         backdrop-filter: blur(10px);
         @include flexbox(space-around);
@@ -183,8 +184,8 @@
         a{
             position: relative;
             color: #FFF; 
-            height: 50px;
-            width: 50px;
+            height: 45px;
+            width: 45px;
             font-size: 1.25em;
             @include flexbox;
             border-radius: 8px;
@@ -206,11 +207,11 @@
                     left: 50%;
                     top: 100%;
                     content: "";
-                    width: 12px;
-                    height: 12px;
+                    width: 10px;
+                    height: 10px;
                     background-color: #00ad99;
                     transform: translate(-50%,-50%) rotate(45deg);
-                    border-radius: 3px;
+                    border-radius: 2px;
                 }
             }
             &:hover, &:focus, &.active {

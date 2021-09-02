@@ -284,7 +284,6 @@ input, select, button {
 }
 
 #as_app {
-  position: relative;
   min-height: 100vh;
   min-width: 100vw;
   overflow-x: scroll;
@@ -307,6 +306,7 @@ input, select, button {
   bottom: 0;
   width: 100%;
   padding: 5px;
+  min-height: 50px;
   background-color: #00ad99cc;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -325,8 +325,8 @@ input, select, button {
 #as_app ul a {
   position: relative;
   color: #FFF;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   font-size: 1.25em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,12 +364,12 @@ input, select, button {
   left: 50%;
   top: 100%;
   content: "";
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background-color: #00ad99;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 #as_app ul a:hover, #as_app ul a:focus, #as_app ul a.active {
@@ -438,10 +438,10 @@ input, select, button {
   }
   #as_app ul a span {
     top: auto;
-    left: calc(100% + 15px);
+    left: calc(100% + 20px);
   }
   #as_app ul a span::before {
-    left: -4px;
+    left: -5px;
     top: 50%;
     -webkit-transform: translate(0%, -50%) rotate(45deg);
             transform: translate(0%, -50%) rotate(45deg);

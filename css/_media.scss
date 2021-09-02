@@ -28,9 +28,9 @@
             border-radius: 0;
             a span{
                 top: auto;
-                left: calc(100% + 15px);
+                left: calc(100% + 20px);
                 &::before{
-                    left: -4px;
+                    left: -5px;
                     top: 50%;
                     transform: translate(0%,-50%) rotate(45deg);
                 }
