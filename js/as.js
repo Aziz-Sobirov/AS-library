@@ -12,6 +12,8 @@ if(navbar){
 <div id="navbar_mobile"></div>
 <!-- close -->
 <div id="navbar_close" onclick="nav()"></div>`
+}else{
+    console.log("navbar")
 }
 
 
