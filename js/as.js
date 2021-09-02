@@ -1,7 +1,8 @@
 // navbar
 let navbar = document.getElementById("navbar")
 
-navbar.innerHTML=`
+if(navbar){
+    navbar.innerHTML=`
 <h2>${navbar_title}</h2>
 <div id="navbar_bars" onclick="nav()">
     <span></span><span></span><span></span>
@@ -11,6 +12,7 @@ navbar.innerHTML=`
 <div id="navbar_mobile"></div>
 <!-- close -->
 <div id="navbar_close" onclick="nav()"></div>`
+}
 
 
 let openedNav = false
