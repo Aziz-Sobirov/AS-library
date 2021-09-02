@@ -17,3 +17,28 @@ let navbar_list = [
         href:"section4"
     }
     ]
+
+
+let as_app_bar = [
+    {
+        name:"Home",
+        icon:"ai-home",
+        href:"as_app-home"
+    },{
+        name:"Profile",
+        icon:"ai-person",
+        href:"as_app-profile"
+    },{
+        name:"Settings",
+        icon:"ai-gear",
+        href:"as_app-settings"
+    },{
+        name:"Home",
+        icon:"ai-home",
+        href:"as_app-home"
+    },{
+        name:"Profile",
+        icon:"ai-person",
+        href:"as_app-profile"
+    }
+]

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import url("https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css");
+@import url("https://unpkg.com/akar-icons-fonts/src/css/akar-icons.css");
 * {
   margin: 0;
   padding: 0;
@@ -282,6 +283,120 @@ input, select, button {
   opacity: 1;
 }
 
+#as_app {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#as_app ul {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background-color: #00ad99cc;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0 10px 50px 0 rgba(5, 4, 62, 0.25);
+          box-shadow: 0 10px 50px 0 rgba(5, 4, 62, 0.25);
+}
+
+#as_app ul a {
+  position: relative;
+  color: #FFF;
+  height: 50px;
+  width: 50px;
+  font-size: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#as_app ul a span {
+  position: absolute;
+  top: -55px;
+  padding: 5px 15px;
+  font-size: 16px;
+  background-color: #00ad99;
+  white-space: nowrap;
+  border-radius: 6px;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 0;
+  -webkit-transition: .15s ease;
+  transition: .15s ease;
+}
+
+#as_app ul a span:before {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #00ad99;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 3px;
+}
+
+#as_app ul a:hover, #as_app ul a:focus, #as_app ul a.active {
+  background-color: #048071;
+}
+
+#as_app ul a:hover span, #as_app ul a:focus span, #as_app ul a.active span {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+#as_app section {
+  min-width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  scroll-snap-align: start;
+}
+
 @media (min-width: 999px) {
   #navbar_bars, #navbar_mobile, #navbar_close {
     display: none;
@@ -305,6 +420,34 @@ input, select, button {
         grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
+  }
+  #as_app ul {
+    top: 0;
+    left: 0;
+    width: 60px;
+    padding: 5px;
+    min-height: 100vh;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 0;
+  }
+  #as_app ul a span {
+    top: auto;
+    left: calc(100% + 15px);
+  }
+  #as_app ul a span::before {
+    left: -4px;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%) rotate(45deg);
+            transform: translate(0%, -50%) rotate(45deg);
+  }
+  #as_app section {
+    padding-left: 70px;
   }
 }
 

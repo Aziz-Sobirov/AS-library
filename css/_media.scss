@@ -14,6 +14,32 @@
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
+
+    // app
+    #as_app{
+        ul{
+            top: 0;
+            left: 0;
+            width: 60px;
+            padding: 5px;
+            min-height: 100vh;
+            justify-content: flex-start;
+            flex-direction: column;
+            border-radius: 0;
+            a span{
+                top: auto;
+                left: calc(100% + 15px);
+                &::before{
+                    left: -4px;
+                    top: 50%;
+                    transform: translate(0%,-50%) rotate(45deg);
+                }
+            }
+        }
+        section{
+            padding-left: 70px;
+        }
+    }
 }
 
 
