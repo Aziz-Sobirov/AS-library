@@ -122,7 +122,6 @@ input{
         transition: 0.5s;
     }
     &:focus{
-        box-shadow: 0 0 0 2px #000;
         &::placeholder{
             transform: translateX(-100%);
         } 
