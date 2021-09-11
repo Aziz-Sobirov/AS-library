@@ -110,8 +110,14 @@
         position: relative;
         height: 20px;
         width: 20px;
-        background: url("https://www.freeiconspng.com/uploads/remove-icon-png-25.png") center/cover;
+        background:url("https://image.flaticon.com/icons/png/512/659/659891.png") center/cover;
     }
+    &:focus{
+        box-shadow: 0 0 0 2px #000;
+    }
+}
+input{
+    transition:transform 2s;
     &::placeholder{
         transition: 0.5s;
     }
@@ -122,7 +128,6 @@
         } 
     }
 }
-
 // button
 #as_btn{
     position: relative;
@@ -136,12 +141,12 @@
     }
     &::before{
         position: absolute;
-        bottom: 0;
-        left: 0;
-        transform: translate(-50%,50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
         content: "";
-        height: 0;
-        width: 0;
+        height: 20px;
+        width: 20px;
         background: #00ad99;
         border-radius: 50%;
         transition: 0.5s;
@@ -152,8 +157,7 @@
             color: #fff;
         }
         &::before{
-            height: 350px;
-            width: 350px;
+            transform:translate(-50%,-50%) scale(10);
             opacity: 1;
         }
     }
@@ -177,13 +181,13 @@
         width: 100%;
         padding: 5px;
         min-height: 50px;
-        background-color: #00ad99cc;
+        background-color: #ffffff80;
         backdrop-filter: blur(10px);
         @include flexbox(space-around);
         box-shadow: 0 10px 50px 0 rgba(#05043e, .25);
         a{
             position: relative;
-            color: #FFF; 
+            color: #000; 
             height: 45px;
             width: 45px;
             font-size: 1.25em;
@@ -195,7 +199,7 @@
                 top: -55px;
                 padding: 5px 15px;
                 font-size: 16px;
-                background-color: #00ad99;
+                background: #eaebed;
                 white-space: nowrap;
                 border-radius: 6px;
                 transform-origin: center left;
@@ -209,13 +213,13 @@
                     content: "";
                     width: 10px;
                     height: 10px;
-                    background-color: #00ad99;
+                    background-color: #38b8d0;
                     transform: translate(-50%,-50%) rotate(45deg);
                     border-radius: 2px;
                 }
             }
             &:hover, &:focus, &.active {
-                background-color: #048071;
+                background-color: #eaebed;
                 span { 
                     transform: scale(1);
                     opacity: 1;
@@ -231,6 +235,52 @@
         min-height: 100vh;
         @include flexbox;
         scroll-snap-align: start;
+    }
+}
+
+
+// error page
+.as_error{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 5vw;
+    min-height: 100vh;
+    width: 100vw;
+    background: #fff;
+    @include flexbox;
+    display: none;
+    flex-direction: column;
+    img{
+        width: 50vw;
+    }
+    .text{
+        margin-top: 50px;
+        text-align: center;
+        h2{
+            font-size: 2.5em;
+        }
+        p{
+            margin: 10px 0;
+            color: #00000090;
+        }
+    }
+    .btn{
+        margin-top: 50px;
+        @include flexbox;
+        a{
+            padding: 5px 15px;
+            white-space: nowrap;
+            color: #fff;
+            background: #38b8d0;
+            border-radius: 4px;
+            &:last-child{
+                background: transparent;
+                margin-left: 20px;
+                color: #38b8d0;
+                box-shadow: 0 0 0 2px #38b8d0;
+            }
+        }
     }
 }
 

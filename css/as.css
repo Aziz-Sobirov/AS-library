@@ -198,27 +198,7 @@ input, select, button {
   position: relative;
   height: 20px;
   width: 20px;
-  background: url("https://www.freeiconspng.com/uploads/remove-icon-png-25.png") center/cover;
-}
-
-#as_input::-webkit-input-placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#as_input:-ms-input-placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#as_input::-ms-input-placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-#as_input::placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  background: url("https://image.flaticon.com/icons/png/512/659/659891.png") center/cover;
 }
 
 #as_input:focus {
@@ -226,20 +206,52 @@ input, select, button {
           box-shadow: 0 0 0 2px #000;
 }
 
-#as_input:focus::-webkit-input-placeholder {
+input {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+input::-webkit-input-placeholder {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input:-ms-input-placeholder {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input::-ms-input-placeholder {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input::placeholder {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+input:focus {
+  -webkit-box-shadow: 0 0 0 2px #000;
+          box-shadow: 0 0 0 2px #000;
+}
+
+input:focus::-webkit-input-placeholder {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-#as_input:focus:-ms-input-placeholder {
+input:focus:-ms-input-placeholder {
   transform: translateX(-100%);
 }
 
-#as_input:focus::-ms-input-placeholder {
+input:focus::-ms-input-placeholder {
   transform: translateX(-100%);
 }
 
-#as_input:focus::placeholder {
+input:focus::placeholder {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
@@ -259,13 +271,13 @@ input, select, button {
 
 #as_btn::before {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   content: "";
-  height: 0;
-  width: 0;
+  height: 20px;
+  width: 20px;
   background: #00ad99;
   border-radius: 50%;
   -webkit-transition: 0.5s;
@@ -278,8 +290,8 @@ input, select, button {
 }
 
 #as_btn:hover::before {
-  height: 350px;
-  width: 350px;
+  -webkit-transform: translate(-50%, -50%) scale(10);
+          transform: translate(-50%, -50%) scale(10);
   opacity: 1;
 }
 
@@ -307,7 +319,7 @@ input, select, button {
   width: 100%;
   padding: 5px;
   min-height: 50px;
-  background-color: #00ad99cc;
+  background-color: #ffffff80;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   display: -webkit-box;
@@ -324,7 +336,7 @@ input, select, button {
 
 #as_app ul a {
   position: relative;
-  color: #FFF;
+  color: #000;
   height: 45px;
   width: 45px;
   font-size: 1.25em;
@@ -347,7 +359,7 @@ input, select, button {
   top: -55px;
   padding: 5px 15px;
   font-size: 16px;
-  background-color: #00ad99;
+  background: #eaebed;
   white-space: nowrap;
   border-radius: 6px;
   -webkit-transform-origin: center left;
@@ -366,14 +378,14 @@ input, select, button {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #00ad99;
+  background-color: #38b8d0;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
           transform: translate(-50%, -50%) rotate(45deg);
   border-radius: 2px;
 }
 
 #as_app ul a:hover, #as_app ul a:focus, #as_app ul a.active {
-  background-color: #048071;
+  background-color: #eaebed;
 }
 
 #as_app ul a:hover span, #as_app ul a:focus span, #as_app ul a.active span {
@@ -395,6 +407,77 @@ input, select, button {
       -ms-flex-pack: center;
           justify-content: center;
   scroll-snap-align: start;
+}
+
+.as_error {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 5vw;
+  min-height: 100vh;
+  width: 100vw;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.as_error img {
+  width: 50vw;
+}
+
+.as_error .text {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.as_error .text h2 {
+  font-size: 2.5em;
+}
+
+.as_error .text p {
+  margin: 10px 0;
+  color: #00000090;
+}
+
+.as_error .btn {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.as_error .btn a {
+  padding: 5px 15px;
+  white-space: nowrap;
+  color: #fff;
+  background: #38b8d0;
+  border-radius: 4px;
+}
+
+.as_error .btn a:last-child {
+  background: transparent;
+  margin-left: 20px;
+  color: #38b8d0;
+  -webkit-box-shadow: 0 0 0 2px #38b8d0;
+          box-shadow: 0 0 0 2px #38b8d0;
 }
 
 @media (min-width: 999px) {
@@ -448,6 +531,26 @@ input, select, button {
   }
   #as_app section {
     padding-left: 70px;
+  }
+  .as_error {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .as_error img {
+    width: 40vw;
+  }
+  .as_error .text {
+    margin-top: 0;
+    text-align: left;
+  }
+  .as_error .btn {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

@@ -40,6 +40,22 @@
             padding-left: 70px;
         }
     }
+
+    // errors
+    .as_error{
+        flex-direction: row;
+        justify-content: space-around;
+        img{
+            width: 40vw;
+        }
+        .text{
+            margin-top: 0;
+            text-align: left;
+        }
+        .btn{
+            justify-content: flex-start;
+        }
+    }
 }
 
 
