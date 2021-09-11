@@ -105,14 +105,14 @@
     border-radius: 4px;
     font-weight: 500;
     transition: 0.5s;
-    &::-webkit-search-cancel-button{
+    #as_input::-webkit-search-cancel-button{
         -webkit-appearance: none;
         position: relative;
         height: 20px;
         width: 20px;
         background:url("https://image.flaticon.com/icons/png/512/659/659891.png") center/cover;
     }
-    &:focus{
+    #as_input:focus{
         box-shadow: 0 0 0 2px #000;
     }
 }
@@ -122,7 +122,6 @@ input{
         transition: 0.5s;
     }
     &:focus{
-        box-shadow: 0 0 0 #000;
         &::placeholder{
             transform: translateX(-100%);
         } 
