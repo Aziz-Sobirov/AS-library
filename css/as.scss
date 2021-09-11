@@ -118,6 +118,7 @@
 }
 input{
     transition:transform 2s;
+    box-shadow: 0 0 0 #000;
     &::placeholder{
         transition: 0.5s;
     }
