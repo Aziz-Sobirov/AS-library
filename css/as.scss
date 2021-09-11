@@ -118,11 +118,11 @@
 }
 input{
     transition:transform 2s;
-    box-shadow: 0 0 0 #000;
     &::placeholder{
         transition: 0.5s;
     }
     &:focus{
+        box-shadow: 0 0 0 #000;
         &::placeholder{
             transform: translateX(-100%);
         } 

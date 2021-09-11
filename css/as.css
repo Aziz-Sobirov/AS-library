@@ -211,8 +211,6 @@ input {
   transition: -webkit-transform 2s;
   transition: transform 2s;
   transition: transform 2s, -webkit-transform 2s;
-  -webkit-box-shadow: 0 0 0 #000;
-          box-shadow: 0 0 0 #000;
 }
 
 input::-webkit-input-placeholder {
@@ -233,6 +231,11 @@ input::-ms-input-placeholder {
 input::placeholder {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+input:focus {
+  -webkit-box-shadow: 0 0 0 #000;
+          box-shadow: 0 0 0 #000;
 }
 
 input:focus::-webkit-input-placeholder {
