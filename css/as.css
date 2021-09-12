@@ -193,7 +193,7 @@ input, select, button {
   transition: 0.5s;
 }
 
-#as_input #as_input::-webkit-search-cancel-button {
+#as_input::-webkit-search-cancel-button {
   -webkit-appearance: none;
   position: relative;
   height: 20px;
@@ -201,7 +201,7 @@ input, select, button {
   background: url("https://image.flaticon.com/icons/png/512/659/659891.png") center/cover;
 }
 
-#as_input #as_input:focus {
+#as_input:focus {
   -webkit-box-shadow: 0 0 0 2px #000;
           box-shadow: 0 0 0 2px #000;
 }
