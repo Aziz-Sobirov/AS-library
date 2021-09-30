@@ -1,46 +1,47 @@
-// navbar
-let navbar = document.getElementById("navbar")
+// as_navbar
+let as_navbar = document.getElementById("as_navbar")
 
-if(navbar){
-    navbar.innerHTML=`
-<h2>${navbar_title}</h2>
-<div id="navbar_bars" onclick="nav()">
+if(as_navbar){
+    as_navbar.innerHTML=`
+<div class="as_navbar-title">
+    <h2>${as_nav_h2}</h2>
+    <h3>${as_nav_h3}</h3>
+</div>
+<div id="as_navbar_bars" onclick="as_nav()">
     <span></span><span></span><span></span>
 </div>
-<!-- list -->
-<div id="navbar_desktop"></div>
-<div id="navbar_mobile"></div>
+<!--_list -->
+<div id="as_navbar_desktop"></div>
+<div id="as_navbar_mobile"></div>
 <!-- close -->
-<div id="navbar_close" onclick="nav()"></div>`
+<div id="as_navbar_close" onclick="as_nav()"></div>`
 
 // 
-let lastScrollTop = 0;
+let as_ScrollTop = 0;
 window.addEventListener("scroll",function(){
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    scrollTop > lastScrollTop ? navbar.style.top="-55px" : navbar.style.top="0"
-    lastScrollTop = scrollTop;
-    navbar.classList.toggle("bg", window.scrollY > 0)
+    scrollTop > as_ScrollTop ? as_navbar.style.top="-55px" : as_navbar.style.top="0"
+    as_ScrollTop = scrollTop;
+    as_navbar.classList.toggle("bg", window.scrollY > 0)
 })
 
 
-let navbar_desktop = document.getElementById("navbar_desktop")
-let navbar_mobile = document.getElementById("navbar_mobile")
+let as_navbar_desktop = document.getElementById("as_navbar_desktop")
+let as_navbar_mobile = document.getElementById("as_navbar_mobile")
 
 // desktop
-for(let i=0;i<navbar_list.length;i++){
-    navbar_desktop.innerHTML+=`<a href="${navbar_list[i].href}">${navbar_list[i].name}</a>`
+for(let i=0;i<as_nav_list.length;i++){
+    as_navbar_desktop.innerHTML+=`<a href="${as_nav_list[i].href}">${as_nav_list[i].name}</a>`
 }
 // mobile
-for(let i=0;i<navbar_list.length;i++){
-    navbar_mobile.innerHTML+=`<a href="#${navbar_list[i].href}" onclick="nav()">
-    <h4>${navbar_list[i].name}</h4><h4 class="far fa-angle-right"></h4></a>`
+for(let i=0;i<as_nav_list.length;i++){
+    as_navbar_mobile.innerHTML+=`<a href="#${as_nav_list[i].href}" onclick="as_nav()">
+    <h4>${as_nav_list[i].name}</h4><h4 class="far fa-angle-right"></h4></a>`
 }
 }
 
-
-let openedNav = false
-function nav(){
-    navbar.classList.toggle("nav")
+function as_nav(){
+    as_navbar.classList.toggle("nav")
 }
 
 
@@ -63,23 +64,23 @@ let app_bar = document.getElementById("as_app-bar")
 
 
 // errors
-let error = document.getElementById("as_error")
-if(error){
-    error.innerHTML=`
-    <!-- error 404 -->
+let as_err = document.getElementById("as_error")
+if(as_err){
+    as_err.innerHTML=`
+    <!-- as_err 404 -->
     <div id="as_error404" class="as_error">
         <img src="https://raw.githubusercontent.com/Aziz-Sobirov/AS-library/main/img/error404.svg" alt="Aziz Sobirov Error Page">
         <div class="text">
             <h2>Page Not Found</h2>
             <p>We can't find the page you're looking for. You can either return to the previous page, visit or contact our support team.</p>
             <div class="btn">
-                <a href="${error404_home}">Visit Home Page</a>
-                <a href="${error404_contact}">Contact Us</a>
+                <a href="#" onclick="location.reload();">Visit Home Page</a>
+                <a href="https://sobirov.netlify.app/#contact">Contact Us</a>
             </div>
         </div>
     </div>
 
-    <!-- error 503 -->
+    <!-- as_err 503 -->
     <div id="as_error503" class="as_error">
         <img src="https://raw.githubusercontent.com/Aziz-Sobirov/AS-library/main/img/error503.svg" alt="Aziz Sobirov Error Page">
         <div class="text">
@@ -88,13 +89,12 @@ if(error){
         </div>
     </div>
 
-    <!-- error 400 -->
+    <!-- as_err 400 -->
     <div id="as_error400" class="as_error">
         <img src="https://raw.githubusercontent.com/Aziz-Sobirov/AS-library/main/img/error400.svg" alt="Aziz Sobirov Error Page">
         <div class="text">
             <h2>404. That's an Error</h2>
             <p>Your client has issued a malformed or illegal request. That's all we know.</p>
         </div>
-    </div>
-    `
+    </div>`
 }

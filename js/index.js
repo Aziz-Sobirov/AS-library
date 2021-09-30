@@ -1,5 +1,6 @@
-// let navbar_title = "AzizDev"
-// let navbar_list = [
+// let as_nav_h2 = "AzizDev"
+// let as_nav_h3 = ""
+// let as_nav_list = [
 //     {
 //         name:"Home",
 //         href:"#home"
@@ -39,11 +40,3 @@
 //     }
 // ]
 
-
-// error 404
-// let error404_home = 'https://omusic.netlify.app'
-// let error404_contact = 'https://omusic.netlify.app'
-
-// window.addEventListener("click",function(){
-//     document.getElementById("as_error404").style.display="flex"
-// })

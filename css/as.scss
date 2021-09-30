@@ -1,7 +1,7 @@
 @import 'other';
 
-// navbar
-#navbar{
+// as_navbar
+#as_navbar{
     position: fixed;
     top: 0;
     left: 0;
@@ -78,15 +78,15 @@
     }
 }
 
-#navbar.nav{
-    #navbar_mobile{
+#as_navbar.nav{
+    #as_navbar_mobile{
         left: 0;
     }
-    #navbar_close{
+    #as_navbar_close{
         left: 0;
     }
 }
-#navbar.bg{
+#as_navbar.bg{
     background: #eaebed;
 }
 
@@ -228,7 +228,6 @@ input{
         }
     }
 
-
     // app pages
     section{
         min-width: 100%;
@@ -237,7 +236,6 @@ input{
         scroll-snap-align: start;
     }
 }
-
 
 // error page
 .as_error{

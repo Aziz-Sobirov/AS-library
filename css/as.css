@@ -33,7 +33,7 @@ input, select, button {
   outline: none;
 }
 
-#navbar {
+#as_navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -55,7 +55,7 @@ input, select, button {
   z-index: 2;
 }
 
-#navbar_bars {
+#as_navbar_bars {
   padding: 5px 0;
   height: 30px;
   width: 30px;
@@ -76,7 +76,7 @@ input, select, button {
           flex-direction: column;
 }
 
-#navbar_bars span {
+#as_navbar_bars span {
   height: 3px;
   width: 100%;
   background: #000;
@@ -84,25 +84,25 @@ input, select, button {
   transition: 0.5s;
 }
 
-#navbar_bars:hover span:nth-child(1) {
+#as_navbar_bars:hover span:nth-child(1) {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-#navbar_bars:hover span:nth-child(3) {
+#as_navbar_bars:hover span:nth-child(3) {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
 }
 
-#navbar_desktop {
+#as_navbar_desktop {
   display: none;
 }
 
-#navbar_desktop a:not(:last-child) {
+#as_navbar_desktop a:not(:last-child) {
   margin-right: 50px;
 }
 
-#navbar_mobile {
+#as_navbar_mobile {
   position: fixed;
   padding: 10px;
   top: 0;
@@ -130,7 +130,7 @@ input, select, button {
   z-index: 3;
 }
 
-#navbar_mobile a {
+#as_navbar_mobile a {
   padding: 10px;
   width: 100%;
   display: -webkit-box;
@@ -146,11 +146,11 @@ input, select, button {
   transition: 0.5s;
 }
 
-#navbar_mobile a:hover {
+#as_navbar_mobile a:hover {
   background: #eaebed;
 }
 
-#navbar_close {
+#as_navbar_close {
   position: fixed;
   top: 0;
   left: -100%;
@@ -159,15 +159,15 @@ input, select, button {
   z-index: 2;
 }
 
-#navbar.nav #navbar_mobile {
+#as_navbar.nav #as_navbar_mobile {
   left: 0;
 }
 
-#navbar.nav #navbar_close {
+#as_navbar.nav #as_navbar_close {
   left: 0;
 }
 
-#navbar.bg {
+#as_navbar.bg {
   background: #eaebed;
 }
 
@@ -477,10 +477,10 @@ input:focus::placeholder {
 }
 
 @media (min-width: 999px) {
-  #navbar_bars, #navbar_mobile, #navbar_close {
+  #as_navbar_bars, #as_navbar_mobile, #as_navbar_close {
     display: none;
   }
-  #navbar_desktop {
+  #as_navbar_desktop {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
