@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="./css/input.css">
     <title>AS library</title>
 </head>
-<body>
+<body onload="as_onload()">
+
+    <div id="as_load"></div>
+
     <!-- AS navbar -->
     <!-- <div id="as_navbar"></div> -->
 
@@ -46,10 +49,11 @@
         </div> -->
 
         <!-- AS errors -->
-        <div id="as_error"></div>
-
+        <!-- <div id="as_error"></div> -->
     </header>
 
+
+    <script src="./js/anime-min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/as.js"></script>
 </body>

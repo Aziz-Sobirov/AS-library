@@ -1,3 +1,58 @@
+// as load
+let as_load = document.getElementById("as_load")
+if(as_load){
+    function as_onload(){
+        as_load.style.display="none"
+    }
+    as_load.innerHTML='<div class="as_load-bx"><div class="circle circle-1"></div><div class="circle circle-2"></div><div class="circle circle-3"></div><div class="circle circle-4"></div></div>'
+    var as_load_circle1 = anime ({
+        targets: ['.circle-1'],
+        translateY: '-20px',
+        translateX: ['0px','0px','45px'],
+        background:["#fff","#fff","#00c3ff"],
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutElastic',
+        duration: 2000,
+        delay: 500,
+      });
+      
+      var as_load_circle2 = anime ({
+        targets: ['.circle-2'],
+        translateY: ['-20px','0px','20px'],
+        translateX: ['45px','0px'],
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutElastic',
+        duration: 2000,
+        delay: 500,
+      });
+      
+      var as_load_circle3 = anime ({
+        targets: ['.circle-3'],
+        translateY: ['20px','0px','-20px'],
+        translateX: ['-45px','0px'],
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutElastic',
+        duration: 2000,
+        delay: 500,
+      });
+      
+      var as_load_circle4 = anime ({
+        targets: ['.circle-4'],
+        translateY: '20px',
+        translateX: ['0px','0px','-45px'],
+        background:["#fff","#fff","#eeff00"],
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutElastic',
+        duration: 2000,
+        delay: 500,
+      });
+}
+
+
 // as_navbar
 let as_navbar = document.getElementById("as_navbar")
 
