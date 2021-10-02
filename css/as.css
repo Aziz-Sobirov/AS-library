@@ -110,7 +110,7 @@ input, select, button {
           justify-content: space-between;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  z-index: 2;
+  z-index: 5;
 }
 
 #as_navbar_bars {
@@ -226,7 +226,10 @@ input, select, button {
 }
 
 #as_navbar.bg {
-  background: #eaebed;
+  padding: 0 5vw;
+  background: #f1f1f180;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 #as_grid {
@@ -535,6 +538,9 @@ input:focus::placeholder {
 }
 
 @media (min-width: 999px) {
+  #as_navbar {
+    padding: 5vh 5vw;
+  }
   #as_navbar_bars, #as_navbar_mobile, #as_navbar_close {
     display: none;
   }

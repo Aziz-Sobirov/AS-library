@@ -40,7 +40,7 @@
     width: 100%;
     @include flexbox(space-between);
     transition: 0.5s;
-    z-index: 2;
+    z-index: 5;
     &_bars{
         padding: 5px 0;
         height: 30px;
@@ -116,7 +116,9 @@
     }
 }
 #as_navbar.bg{
-    background: #eaebed;
+    padding: 0 5vw;
+    background: #f1f1f180;
+    backdrop-filter: blur(10px);
 }
 
 

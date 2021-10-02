@@ -17,26 +17,26 @@
 //         name:"Contact",
 //         href:"#section4"
 //     }
-//     ]
+// ]
 
 
-let as_app_bar = [
-    {
-        name:"Home",
-        icon:"ai-home",
-        href:"home"
-    },{
-        name:"Features",
-        icon:"far fa-box",
-        href:"features"
-    },{
-        name:"About",
-        icon:"ai-person",
-        href:"about"
-    },{
-        name:"Contact",
-        icon:"far fa-user-headset",
-        href:"contact"
-    }
-]
+// let as_app_bar = [
+//     {
+//         name:"Home",
+//         icon:"ai-home",
+//         href:"home"
+//     },{
+//         name:"Features",
+//         icon:"far fa-box",
+//         href:"features"
+//     },{
+//         name:"About",
+//         icon:"ai-person",
+//         href:"about"
+//     },{
+//         name:"Contact",
+//         icon:"far fa-user-headset",
+//         href:"contact"
+//     }
+// ]
 

@@ -90,7 +90,7 @@ for(let i=0;i<as_nav_list.length;i++){
 }
 // mobile
 for(let i=0;i<as_nav_list.length;i++){
-    as_navbar_mobile.innerHTML+=`<a href="#${as_nav_list[i].href}" onclick="as_nav()">
+    as_navbar_mobile.innerHTML+=`<a href="${as_nav_list[i].href}" onclick="as_nav()">
     <h4>${as_nav_list[i].name}</h4><h4 class="far fa-angle-right"></h4></a>`
 }
 }
