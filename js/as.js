@@ -63,12 +63,12 @@ if(as_navbar){
     <h2>${as_nav_h2}</h2>
     <h3>${as_nav_h3}</h3>
 </div>
+<div id="as_navbar_desktop"></div>
 <div id="as_navbar_bars" onclick="as_nav()">
     <span></span><span></span><span></span>
 </div>
 </div>
 <!--_list -->
-<div id="as_navbar_desktop"></div>
 <div id="as_navbar_mobile"></div>
 <!-- close -->
 <div id="as_navbar_close" onclick="as_nav()"></div>`
