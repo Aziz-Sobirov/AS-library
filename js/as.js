@@ -73,7 +73,7 @@ if(as_navbar){
 <!-- close -->
 <div id="as_navbar_close" onclick="as_nav()"></div>`
 
-// 
+// scroll nav
 let as_navbar_menu = document.querySelector(".as_navbar-menu")
 let as_ScrollTop = 0;
 window.addEventListener("scroll",function(){
