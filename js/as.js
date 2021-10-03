@@ -58,12 +58,14 @@ let as_navbar = document.getElementById("as_navbar")
 
 if(as_navbar){
     as_navbar.innerHTML=`
+<div class="as_navbar-menu">
 <div class="as_navbar-title">
     <h2>${as_nav_h2}</h2>
     <h3>${as_nav_h3}</h3>
 </div>
 <div id="as_navbar_bars" onclick="as_nav()">
     <span></span><span></span><span></span>
+</div>
 </div>
 <!--_list -->
 <div id="as_navbar_desktop"></div>
@@ -72,12 +74,13 @@ if(as_navbar){
 <div id="as_navbar_close" onclick="as_nav()"></div>`
 
 // 
+let as_navbar_menu = document.querySelector(".as_navbar-menu")
 let as_ScrollTop = 0;
 window.addEventListener("scroll",function(){
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    scrollTop > as_ScrollTop ? as_navbar.style.top="-55px" : as_navbar.style.top="0"
+    scrollTop > as_ScrollTop ? as_navbar_menu.style.top="-55px" : as_navbar_menu.style.top="0px"
     as_ScrollTop = scrollTop;
-    as_navbar.classList.toggle("bg", window.scrollY > 0)
+    as_navbar_menu.classList.toggle("bg", window.scrollY > 0)
 })
 
 

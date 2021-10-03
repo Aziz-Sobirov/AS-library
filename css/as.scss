@@ -31,16 +31,19 @@
 
 // as_navbar
 #as_navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0 5vw;
-    height: 50px;
-    max-height: 50px;
-    width: 100%;
-    @include flexbox(space-between);
-    transition: 0.5s;
-    z-index: 5;
+    max-height: 0px;
+    .as_navbar-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 5vw;
+        height: 50px;
+        max-height: 50px;
+        width: 100%;
+        @include flexbox(space-between);
+        transition: 0.5s;
+        z-index: 3;
+    }
     &_bars{
         padding: 5px 0;
         height: 30px;
@@ -80,7 +83,7 @@
         left: -220px;
         min-height: 100vh;
         width: 220px;
-        background: #f1f1f190;
+        background: #f1f1f170;
         backdrop-filter: blur(10px);
         @include flexbox(flex-start,flex-start);
         flex-direction: column;
@@ -92,7 +95,7 @@
             @include flexbox(space-between);
             transition: 0.5s;
             &:hover{
-                background: #eaebed;
+                background: #d0d1d3;
             }
         }
     }
@@ -115,7 +118,7 @@
         left: 0;
     }
 }
-#as_navbar.bg{
+.as_navbar-menu.bg{
     padding: 0 5vw;
     background: #f1f1f180;
     backdrop-filter: blur(10px);
