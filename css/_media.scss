@@ -1,6 +1,7 @@
 @media (min-width:999px){
     #as_navbar{
-        padding: 5vh 5vw;
+        .as_navbar-menu{padding: 5vh 5vw;}
+        .as_navbar-menu.bg{padding: 0 5vw;}
         &_bars,&_mobile,&_close{
             display: none;
         }

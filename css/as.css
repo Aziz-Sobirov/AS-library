@@ -92,6 +92,7 @@ input, select, button {
 }
 
 #as_navbar {
+  position: absolute;
   max-height: 0px;
 }
 
@@ -542,8 +543,11 @@ input:focus::placeholder {
 }
 
 @media (min-width: 999px) {
-  #as_navbar {
+  #as_navbar .as_navbar-menu {
     padding: 5vh 5vw;
+  }
+  #as_navbar .as_navbar-menu.bg {
+    padding: 0 5vw;
   }
   #as_navbar_bars, #as_navbar_mobile, #as_navbar_close {
     display: none;

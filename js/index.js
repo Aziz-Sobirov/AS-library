@@ -1,23 +1,23 @@
-// let as_nav_h2 = "AzizDev"
-// let as_nav_h3 = ""
-// let as_nav_list = [
-//     {
-//         name:"Home",
-//         href:"#home"
-//     },{
-//         name:"Resume",
-//         href:"#resume"
-//     },{
-//         name:"Projects",
-//         href:"#projects"
-//     },{
-//         name:"Services & Pricing",
-//         href:"#section3"
-//     },{
-//         name:"Contact",
-//         href:"#section4"
-//     }
-// ]
+let as_nav_h2 = "AzizDev"
+let as_nav_h3 = ""
+let as_nav_list = [
+    {
+        name:"Home",
+        href:"#home"
+    },{
+        name:"Resume",
+        href:"#resume"
+    },{
+        name:"Projects",
+        href:"#projects"
+    },{
+        name:"Services & Pricing",
+        href:"#section3"
+    },{
+        name:"Contact",
+        href:"#section4"
+    }
+]
 
 
 // let as_app_bar = [
