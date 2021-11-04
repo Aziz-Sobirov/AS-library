@@ -21,7 +21,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-weight: 400;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
     user-select: none;
@@ -29,6 +28,11 @@
 *::-webkit-scrollbar {
     display: none;
 }
+
+:root{
+    --cl:#005775;
+}
+
 a{
     text-decoration: none;
     color: #000;

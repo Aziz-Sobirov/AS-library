@@ -6,7 +6,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-weight: 400;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   -webkit-user-select: none;
@@ -17,6 +16,10 @@
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+:root {
+  --cl:#005775;
 }
 
 a {
@@ -161,8 +164,20 @@ input, select, button {
   display: none;
 }
 
+#as_navbar_desktop a {
+  padding: 0 5px;
+  font-weight: 500;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 #as_navbar_desktop a:not(:last-child) {
   margin-right: 50px;
+}
+
+#as_navbar_desktop a:hover {
+  -webkit-box-shadow: 0 3px 0 var(--cl);
+          box-shadow: 0 3px 0 var(--cl);
 }
 
 #as_navbar_mobile {
@@ -172,7 +187,7 @@ input, select, button {
   left: -220px;
   min-height: 100vh;
   width: 220px;
-  background: #f1f1f170;
+  background: #f1f1f180;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   display: -webkit-box;
@@ -196,6 +211,7 @@ input, select, button {
 #as_navbar_mobile a {
   padding: 10px;
   width: 100%;
+  color: #000000d0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,10 +223,17 @@ input, select, button {
           justify-content: space-between;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  border-radius: 4px;
 }
 
-#as_navbar_mobile a:hover {
-  background: #d0d1d3;
+#as_navbar_mobile a h4 {
+  font-weight: 500;
+}
+
+#as_navbar_mobile a:hover, #as_navbar_mobile a.active {
+  color: #fff;
+  text-indent: 10px;
+  background: var(--cl);
 }
 
 #as_navbar_close {
@@ -249,7 +272,7 @@ input, select, button {
       grid-template-rows: auto;
 }
 
-#as_input {
+input {
   padding: 5px;
   -webkit-box-shadow: 0 0 0 1.5px #00000090;
           box-shadow: 0 0 0 1.5px #00000090;
@@ -259,44 +282,29 @@ input, select, button {
   transition: 0.5s;
 }
 
-#as_input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  position: relative;
-  height: 20px;
-  width: 20px;
-  background: url("https://image.flaticon.com/icons/png/512/659/659891.png") center/cover;
-}
-
-#as_input:focus {
-  -webkit-box-shadow: 0 0 0 2px #000;
-          box-shadow: 0 0 0 2px #000;
-}
-
-input {
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
-}
-
 input::-webkit-input-placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 input:-ms-input-placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 input::-ms-input-placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 input::placeholder {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+input:focus {
+  -webkit-box-shadow: 0 0 0 2px #000;
+          box-shadow: 0 0 0 2px #000;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -317,20 +325,31 @@ input:focus::placeholder {
           transform: translateX(-100%);
 }
 
-#as_btn {
+#as_input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background: url("https://image.flaticon.com/icons/png/512/659/659891.png") center/cover;
+}
+
+#as_btn, .as_btn {
   position: relative;
   overflow: hidden;
   padding: 7px 30px;
-  background: #eaebed;
+  background: var(--cl);
   border-radius: 4px;
+  cursor: pointer;
 }
 
-#as_btn a {
+#as_btn a, .as_btn a {
   position: relative;
+  font-weight: 600;
+  color: #fff;
   text-transform: uppercase;
 }
 
-#as_btn::before {
+#as_btn::before, .as_btn::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -339,18 +358,18 @@ input:focus::placeholder {
   content: "";
   height: 20px;
   width: 20px;
-  background: #00ad99;
+  background: #eaebed;
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   opacity: 0;
 }
 
-#as_btn:hover a {
-  color: #fff;
+#as_btn:hover a, .as_btn:hover a {
+  color: var(--cl);
 }
 
-#as_btn:hover::before {
+#as_btn:hover::before, .as_btn:hover::before {
   -webkit-transform: translate(-50%, -50%) scale(10);
           transform: translate(-50%, -50%) scale(10);
   opacity: 1;
@@ -469,6 +488,7 @@ input:focus::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
   scroll-snap-align: start;
+  scroll-snap-stop: inherit;
 }
 
 .as_error {

@@ -1,4 +1,5 @@
 // as load
+
 let as_load = document.getElementById("as_load")
 if(as_load){
     function as_onload(){
@@ -133,7 +134,7 @@ if(as_err){
             <p>We can't find the page you're looking for. You can either return to the previous page, visit or contact our support team.</p>
             <div class="btn">
                 <a href="#" onclick="location.reload();">Visit Home Page</a>
-                <a href="https://sobirov.netlify.app/#contact">Contact Us</a>
+                <a href="https://aziz-webdev.netlify.app/#contact">Contact Us</a>
             </div>
         </div>
     </div>

@@ -4,4 +4,9 @@ header {
   display: grid;
   place-items: center;
 }
+
+header .as_anime {
+  background: #005775;
+  color: #fff;
+}
 /*# sourceMappingURL=input.css.map */
