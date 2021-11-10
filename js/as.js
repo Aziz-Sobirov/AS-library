@@ -157,3 +157,120 @@ if(as_err){
         </div>
     </div>`
 }
+
+
+// AS form
+let as_form = document.getElementById("as_form")
+if(as_form){
+    as_form.innerHTML=`
+<form id="as_form_sign-up"  onsubmit="return as_signUp()">
+    <h2>Get Started</h2>
+    <fieldset>
+        <input type="name" name="Enter your name" id="as_username" minlength="3" maxlength="25" placeholder="Enter your name" required>
+        <legend>Your Name</legend>
+    </fieldset>
+    <fieldset>
+        <input type="email" name="Enter your email" id="as_userEmail" minlength="10" placeholder="Enter your email" required>
+        <legend>Your Email</legend>
+    </fieldset>
+    <fieldset>
+        <input type="password" name="Enter your password" id="as_password"
+        minlength="8" maxlength="25" placeholder="Enter your password" required>
+        <legend>Your Password</legend>
+        <i onclick="as_showPassword(this)" class="ai-eye-closed"></i>
+    </fieldset>
+    <fieldset>
+        <input type="password" name="Enter your Confirm password" id='as_conPassword' minlength="8" maxlength="25" placeholder="Retype your passowrd" required>
+        <legend>Your Confirm Password</legend>
+        <i onclick="as_showConPassword(this)" class="ai-eye-closed"></i>
+    </fieldset>
+    <button type="submit">Sign Up</button>
+    <a href="#as_form_login">Already you have an account. Login</a>
+</form>
+
+<!-- login -->
+<form action="" id="as_form_login" onsubmit="return as_login()">
+    <h2>Login here</h2>
+    <fieldset>
+        <input type="email" name="Enter your email" id="as_loginEmail" minlength="10" placeholder="Enter your email" required>
+        <legend class="as_loginEmailLegend">Your Email</legend>
+    </fieldset>
+    <fieldset>
+        <input type="password" name="Enter your password" id="as_loginPassword"
+        minlength="8" maxlength="25" placeholder="Enter your password" required>
+        <legend class="as_loginPasswordLegend">Your Password</legend>
+        <i onclick="as_showPassword(this)" class="ai-eye-closed"></i>
+    </fieldset>
+    <button type="submit">Login</button>
+    <a href="#as_form_sign-up">Need an account. Sign Up</a>
+</form>`
+
+let as_username = document.getElementById("as_username")
+let as_userEmail = document.getElementById("as_userEmail")
+let as_password = document.getElementById('as_password')
+let as_conPassword = document.getElementById('as_conPassword')
+let as_loginEmail = document.getElementById("as_loginEmail")
+let as_loginPassword = document.getElementById('as_loginPassword')
+let asPass = false
+let asConPass = false
+
+function as_signUp(){
+    as_users.push({
+        name: as_username.value.trim(),
+        email: as_userEmail.value.trim(),
+        password: as_conPassword.value
+    })
+    as_form.style.display='none'
+    return false;
+}
+function as_login(){
+    for(let i=0;i<as_users.length;i++){
+        let lg = document.querySelector(".as_loginEmailLegend")
+        let lg1 = document.querySelector(".as_loginPasswordLegend")
+
+        if(as_users[i].email.includes(as_loginEmail.value)){
+            lg.innerHTML='Complated'
+            lg.style.color='#00ad99'
+        }else{
+            lg.innerHTML='Email Not Found'
+            lg.style.color='#ff0066'
+        }
+        if(as_users[i].email.includes(as_loginEmail.value) && as_users[i].password === as_loginPassword.value){
+            lg1.innerHTML='Complated'
+            lg1.style.color='#00ad99'
+        }else{
+            lg1.innerHTML='Password is wrong'
+            lg1.style.color='#ff0066'
+        }
+        if(lg.innerHTML === 'Complated' && lg1.innerHTML === 'Complated'){
+            as_form.style.display='none'
+        }
+    }
+    return false;
+}
+
+function as_showPassword(i){
+    if(!asPass){
+        asPass = true
+        i.classList = 'ai-eye-open'
+        as_password.type = 'text'
+        as_loginPassword.type = 'text'
+    }else{
+        asPass = false
+        i.classList = 'ai-eye-closed'
+        as_password.type = 'password'
+        as_loginPassword.type = 'password'
+    }
+}
+function as_showConPassword(i){
+    if(!asConPass){
+        asConPass = true
+        i.classList = 'ai-eye-open'
+        as_conPassword.type = 'text'
+    }else{
+        asConPass = false
+        i.classList = 'ai-eye-closed'
+        as_conPassword.type = 'password'
+    }
+}
+}

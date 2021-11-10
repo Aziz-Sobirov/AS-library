@@ -40,3 +40,12 @@ let as_app_bar = [
     }
 ]
 
+
+
+let as_users = [
+    {
+        name:'Aziz',
+        email:'azizsobirovdev@gmail.com',
+        password:'qwerty123'
+    }
+]

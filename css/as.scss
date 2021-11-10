@@ -332,10 +332,87 @@ input{
     }
 }
 
-// #as_error400{
-//     display: flex;
-// }
-
+//  form
+#as_form{
+    min-height: 100vh;
+    max-height: 100vh;
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+    @include flexbox;
+    justify-content: flex-start;
+    z-index: 4;
+    background: #fff;
+    fieldset{
+        margin: 5px 0;
+        width: 100%;
+        border: 2.5px solid #00000080;
+        border-radius: 5px;
+        @include flexbox;
+        legend{
+            margin-left: 10px;
+            padding: 0 2.5px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #00000080;
+        }
+        input{
+            width: 100%;
+            font-size: 16px;
+            box-shadow: none;
+            &:valid + legend{
+                color: #005775;
+                font-weight: 600;
+            }
+            &:focus:invalid + legend {
+                color: #ff0066;
+            }
+        }
+        i{
+            margin-right: 5px;
+            margin-bottom: 2px;
+            min-height: 30px;
+            min-width: 30px;
+            border-radius: 50%;
+            background: #005775;
+            color: #fff;
+            @include flexbox;
+        }
+    }
+    button{
+        margin: 10px 0;
+        padding: 6px 25px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        background: #005775;
+        border-radius: 4px;
+        transition: 0.5s;
+        &:hover{
+            background: #0185b1;
+        }
+    }
+    a{
+        font-weight: 500;
+        color: #005775;
+        &:visited{
+            color: #000;
+        }
+    }
+    &_sign-up{
+        min-width: 100vw;
+        padding: 0 10vw;
+        @include flexbox;
+        flex-direction: column;
+    }
+    &_login{
+        min-width: 100vw;
+        padding: 0 10vw;
+        @include flexbox;
+        flex-direction: column;
+    }
+}
 
 
 
