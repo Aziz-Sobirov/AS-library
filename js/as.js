@@ -215,11 +215,11 @@ let asPass = false
 let asConPass = false
 
 function as_signUp(){
-    as_user.push({
+    as_user = {
         name: as_username.value.trim(),
         email: as_userEmail.value.trim(),
-        password: as_conPassword.value
-    })
+        password: as_password.value.trim()
+    }
     as_form.style.display='none'
     return false;
 }
@@ -243,11 +243,11 @@ function as_login(){
             lg1.style.color='#ff0066'
         }
         if(lg.innerHTML === 'Complated' && lg1.innerHTML === 'Complated'){
-            as_user.push({
+            as_user = {
                 name:as_users[i].name,
                 email:as_users[i].email,
                 password:as_users[i].password
-            })
+            }
             as_form.style.display='none'
         }
     }
