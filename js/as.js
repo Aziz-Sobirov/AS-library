@@ -215,7 +215,7 @@ let asPass = false
 let asConPass = false
 
 function as_signUp(){
-    as_users.push({
+    as_user.push({
         name: as_username.value.trim(),
         email: as_userEmail.value.trim(),
         password: as_conPassword.value
@@ -243,6 +243,11 @@ function as_login(){
             lg1.style.color='#ff0066'
         }
         if(lg.innerHTML === 'Complated' && lg1.innerHTML === 'Complated'){
+            as_user.push({
+                name:as_users[i].name,
+                email:as_users[i].email,
+                password:as_users[i].password
+            })
             as_form.style.display='none'
         }
     }

@@ -49,3 +49,4 @@ let as_users = [
         password:'qwerty123'
     }
 ]
+let as_user = []
